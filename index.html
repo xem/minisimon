@@ -4,7 +4,7 @@
 <a href=index.min.html>minified (866b)</a> - <a href=index.min.pack.html>packed (805b)</a>
 <br>
 <br>
-<table cellspacing=0 width=400 height=400 style="border-radius:50%;border:5px solid #000;overflow:hidden">
+<table cellspacing=0 width=400 height=400 style="border-radius:50%;border:5px solid #000;overflow:hidden;cursor:pointer">
 <td style="border:1px solid" bgcolor=green id=t0 onclick="d&&z(0)">
 <td style="border:1px solid" bgcolor=red id=t1 onclick="d&&z(1)">
 <tr>
@@ -46,7 +46,7 @@ z=function(n){
       
       // Lose
       else{
-        alert("lost");
+        alert("You lost!\nscore: "+(a.length-1)+".\nF5 to retry!");
         e=1;
       }
     }
