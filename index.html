@@ -4,7 +4,11 @@
 <b>For Chrome - Opera - Firefox</b>
 <br>
 <br>
-<a href=index.min.html>golfed (802b)</a> - <a href=index.min.pack.html>packed (746b)</a>
+<a href=index.min.html>golfed (788b)</a> - <a href=index.min.pack.html>packed (746b)</a>
+<br>
+<br>
+<a href=tiny.min.html>very tiny version (511b)</a>
+<br>
 <br>
 <br>
 <table cellspacing=0 width=400 height=400 style="border-radius:50%;border:5px solid #000;overflow:hidden;cursor:pointer">
@@ -16,7 +20,6 @@
 </table>
 <script>
 a=[]; // correct order
-//b=0;  // autoplay index in a
 c=0;  // manual play index in a
 d=0;  // state (0: autoplay / 1:manual play)
 e=0;  // game over (0: no / 1: yes)
@@ -49,8 +52,8 @@ z=function(n){
       
       // Lose
       else{
-        alert("You lost!\nscore: "+(a.length-1)+".\nF5 to retry!");
-        e=1;
+        if(confirm("You lost!\nscore: "+(a.length-1)+".\nRestart?"))
+          location=location;
       }
     }
   }
