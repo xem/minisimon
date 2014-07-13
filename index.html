@@ -1,73 +1,13 @@
+<body onload="a=function(k,q){z=['00F','FF0','F00','080'];~k&&new Audio((b='data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YU')+Array(z[(3+k)%4]=333).join(b.slice(60+k*2))).play(s(a,250,-1));p.style.borderColor='#'+z.join('#');if(q)k^f[j]?alert(':('):++j^g||h()};(h=function(){for(i=g=f.push(new Date%4);j=i;s(a,500*i--,f[i]))s=setTimeout})(f=[])"onkeyup=a(event.keyCode-37,1)>
 <style>body{font-family:arial}h1{margin:10px}</style><center>
 <a href=//github.com/xem/minisimon><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 <h1>MiniSimon</h1>
-<b>For Chrome - Opera - Firefox</b>
+use arrow keys to play
 <br>
 <br>
-<a href=new.html>golfed by xem, subzey and nderscore</a> (510b - use arrow keys to play)
+<a href=new.html>golfed by xem, subzey and nderscore</a> (499b)
+<br>
+<a href=tiny.html>minimalist</a> (314b)
 <br>
 <br>
-<br>
-<table cellspacing=0 width=400 height=400 style="border-radius:50%;border:5px solid #000;overflow:hidden;cursor:pointer">
-<td style="border:1px solid" bgcolor=green id=t0 onclick="d&&z(0)">
-<td style="border:1px solid" bgcolor=red id=t1 onclick="d&&z(1)">
-<tr>
-<td style="border:1px solid" bgcolor=yellow id=t2 onclick="d&&z(2)">
-<td style="border:1px solid" bgcolor=blue id=t3 onclick="d&&z(3)">
-</table>
-<script>
-a=[]; // correct order
-c=0;  // manual play index in a
-d=0;  // state (0: autoplay / 1:manual play)
-e=0;  // game over (0: no / 1: yes)
-f=0;  // current cell
-t=0;  // tmp
-
-// click function
-z=function(n){
-
-  // If not game over
-  if(!e){
-  
-    // Manual & Auto: play sound, change opacity
-    new Audio('data:audio/wav;base64,UklGRl9vT19XQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YU'+Array(250).join("AfAAABAAgAZGF0YU".slice(n*2))).play();
-    (t=window["t"+n]).style.opacity=.3;
-    setTimeout("t.style.opacity=1",200);
-    
-    // Manual
-    if(d){
-      
-      // Correct click
-      if(n==a[c]){
-        c++;
-        
-        // Win
-        if(c==a.length){
-          y();
-        }
-      }
-      
-      // Lose
-      else{
-        if(confirm("You lost!\nscore: "+(a.length-1)+".\nRestart?"))
-          location=location;
-      }
-    }
-  }
-}
-
-// Autoplay
-y=function(){
-  d=0;
-  a.push(4*Math.random()|0);
-  i=a.length;
-  setTimeout("d=1;c=0;",1e3+i*500);
-  for(;i--;){
-    setTimeout("z("+a[i]+")",1e3+i*500);
-  }
-}
-
-y()
-
-</script>
-<div style=width:150px;height:150px;border-radius:50%;position:relative;top:-280px;background:#000></div>
+<p style="background:#000;width:6em;height:6em;border-radius:50%;border:6em solid"id=p>
